@@ -1,0 +1,36 @@
+.year-dropdown {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1000;
+    display: block;
+    width: 300px; 
+  }
+
+  .years-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  
+  .year {
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .year.selected {
+    border: 2px solid #d6882f; 
+  }
+  
+  .year:hover {
+    background-color: #d6882f;
+    color: white;
+  }
+  

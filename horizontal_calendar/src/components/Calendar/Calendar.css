@@ -1,0 +1,149 @@
+/* src/components/Calendar.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calendar-title {
+  text-align: center;  
+  margin-bottom: 20px; 
+}
+
+.calendar-title h1 {
+  margin: 0;
+  font-size: 2rem; 
+  color: #0970ce; 
+}
+
+.calendar-card {
+  background-color: white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px;
+  padding: 20px;
+  width: 800px;
+}
+
+.month-year-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.month-year-part {
+
+}
+
+.separator-line {
+  height: 1px;
+  background-color: #cfe3ff; 
+  margin: 10px 0;
+}
+
+.date-display {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  color: #0970ce;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  position: relative;
+}
+
+.date-label {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.formatted-date {
+  color: #0970ce;
+  font-size: 1.2rem;
+}
+
+.month-year-display {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  color: #d6882f;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  position: relative;
+}
+
+.month-year-part {
+  background-color: transparent; 
+  color: #d6882f; 
+  border: 2px solid #d6882f; 
+  border-radius: 4px;
+  padding: 10px 16px; 
+  cursor: pointer;
+  font-size: 1em;  
+  text-transform: uppercase;
+  border-radius: 5px;
+  position: relative;
+}
+
+.month-year-part:hover {
+  background-color: #d6882f;
+  color: white;
+}
+
+.calendar-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-button {
+  font-size: 1.2rem;
+  background-color: #0970ce;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #075ab6;
+}
+
+.days-container {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  margin-top: 10px;
+}
+
+.day {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 40px;
+  border-radius: 5px;
+}
+
+.day.selected {
+  background-color: #d6882f; 
+  color: white;
+}
+
+.day.today {
+  border: 2px solid #d6882f; 
+}
+
+.day:hover {
+  background-color: #eecfad; 
+  color: white;
+}

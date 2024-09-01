@@ -1,0 +1,36 @@
+
+.month-dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1000;
+  display: block;
+  width: 300px; 
+}
+
+.months-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.month {
+  padding: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.month.selected {
+  border: 2px solid #d6882f; 
+}
+
+.month:hover {
+  background-color: #d6882f;
+  color: white;
+}
