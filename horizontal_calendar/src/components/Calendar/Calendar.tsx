@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Calendar.css';
 import MonthDropdown from '../Dropdowns/MonthDropdown/MonthDropdown';
 import YearDropdown from '../Dropdowns/YearDropdown/YearDropdown';
+import { IoMdArrowDropdown } from "react-icons/io";
+
+
 
 interface CalendarProps {
   selectedDate: Date;
@@ -15,9 +18,6 @@ const Calendar: React.FC<CalendarProps> = ({ selectedDate, onDateChange, customD
   const today = new Date();
   const startOfWeek = new Date(selectedDate);
   startOfWeek.setDate(selectedDate.getDate() - selectedDate.getDay());
-
-  const startYear = 2000;
-  const endYear = 2030;
 
   const generateWeekDays = () => {
     const weekDays = [];
@@ -73,8 +73,9 @@ const Calendar: React.FC<CalendarProps> = ({ selectedDate, onDateChange, customD
     <div className="calendar">
       <div className="month-year-display">
       <button className="month-year-part" onClick={() => setShowMonthDropdown(!showMonthDropdown)}>
-          {getMonthAbbreviation(selectedDate)}
-        </button>
+          {getMonthAbbreviation(selectedDate)} 
+          <IoMdArrowDropdown />
+          </button>
         {showMonthDropdown && (
           <MonthDropdown
             selectedMonth={selectedDate.getMonth()}
@@ -84,6 +85,7 @@ const Calendar: React.FC<CalendarProps> = ({ selectedDate, onDateChange, customD
         )}
         <button className="month-year-part" onClick={() => setShowYearDropdown(!showYearDropdown)}>
           {selectedDate.getFullYear()}
+          <IoMdArrowDropdown />
         </button>
         {showYearDropdown && (
           <YearDropdown
